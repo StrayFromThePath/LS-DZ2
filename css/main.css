@@ -1,0 +1,271 @@
+@import "/css/normalize.css";
+/* --------- Fonts --------- */
+@font-face {
+  font-family: 'elektra_medium_proregular';
+  src: url('/fonts/elektra/elektra_medium_pro-webfont.eot');
+  src: url('/fonts/elektra/elektra_medium_pro-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/elektra/elektra_medium_pro-webfont.woff2') format('woff2'), url('/fonts/elektra/elektra_medium_pro-webfont.woff') format('woff'), url('/fonts/elektra/elektra_medium_pro-webfont.ttf') format('truetype'), url('/fonts/elektra/elektra_medium_pro-webfont.svg#elektra_medium_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_proregular';
+  src: url('/fonts/elektra/elektra_light_pro-webfont.eot');
+  src: url('/fonts/elektra/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/elektra/elektra_light_pro-webfont.woff2') format('woff2'), url('/fonts/elektra/elektra_light_pro-webfont.woff') format('woff'), url('/fonts/elektra/elektra_light_pro-webfont.ttf') format('truetype'), url('/fonts/elektra/elektra_light_pro-webfont.svg#elektra_light_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_medium_proitalic';
+  src: url('/fonts/elektra/elektra_medium_pro_italic-webfont.eot');
+  src: url('/fonts/elektra/elektra_medium_pro_italic-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/elektra/elektra_medium_pro_italic-webfont.woff2') format('woff2'), url('/fonts/elektra/elektra_medium_pro_italic-webfont.woff') format('woff'), url('/fonts/elektra/elektra_medium_pro_italic-webfont.ttf') format('truetype'), url('/fonts/elektra/elektra_medium_pro_italic-webfont.svg#elektra_medium_proitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_probold';
+  src: url('/fonts/elektra/elektra_light__pro_bold-webfont.eot');
+  src: url('/fonts/elektra/elektra_light__pro_bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/elektra/elektra_light__pro_bold-webfont.woff2') format('woff2'), url('/fonts/elektra/elektra_light__pro_bold-webfont.woff') format('woff'), url('/fonts/elektra/elektra_light__pro_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.elektra-m {
+  font-family: 'elektra_medium_proregular';
+}
+.elektra-l {
+  font-family: 'elektra_light_proregular';
+}
+.elektra-mital {
+  font-family: 'elektra_medium_proitalic';
+}
+.elektra-lb {
+  font-family: 'elektra_light_probold';
+}
+/* --------- Mixins --------- */
+/* MIXINS */
+.inlineblock {
+  display: inline !ie;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* --------- Base --------- */
+/* --------- Base --------- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100.01%;
+}
+body {
+  font: 14px/1.41 "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding: 0;
+  left: 0;
+  list-style: none outside none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow: hidden;
+  min-width: 1000px;
+}
+.wrapper .empty {
+  position: relative;
+  height: 238px;
+}
+footer {
+  position: relative;
+  margin-top: -238px;
+  height: 238px;
+}
+/*--------Header--------*/
+.header {
+  position: relative;
+  height: 120px;
+  background: url(/img/head_bg.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+.header__logo {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.contacts {
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+.contacts__tel {
+  display: block;
+  font-family: 'elektra_light_proregular';
+  font-size: 25px;
+  color: #5c7b98;
+  text-align: right;
+}
+.contacts__tel span {
+  color: #00b9fe;
+  font-family: 'elektra_light_probold';
+  font-size: 14px;
+  vertical-align: text-top;
+}
+.contacts__mail {
+  display: block;
+  font-family: 'elektra_light_proregular';
+  font-size: 17px;
+  color: #613993;
+  text-align: right;
+}
+.contacts__mail:hover {
+  text-decoration: underline;
+}
+/*------Menu---------*/
+.nav__list {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  margin-top: -21px;
+  margin-left: 15px;
+}
+.nav__list:before,
+.nav__list:after {
+  content: "";
+  display: table;
+}
+.nav__list:after {
+  clear: both;
+}
+.nav__item {
+  position: relative;
+  float: left;
+}
+.nav__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+  background: url(../img/nav_dec.png) no-repeat left center;
+  width: 18px;
+  height: 40px;
+  z-index: 1000;
+}
+.nav__item:first-child .nav__link {
+  padding-left: 10px;
+}
+.nav__item:first-child:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -17px;
+  background: url(../img/nav_decor_first.png) no-repeat left center;
+  width: 17px;
+  height: 42px;
+}
+.nav__item:last-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  background: url(../img/nav_decor_last.png) no-repeat right center;
+  width: 16px;
+  height: 41px;
+}
+.nav__link {
+  display: block;
+  padding-right: 10px;
+  padding-left: 28px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
+  font-family: 'elektra_light_proregular';
+  font-size: 15px;
+  color: #5c7b98;
+  line-height: 40px;
+  text-align: center;
+  z-index: 10000;
+}
+.nav__link.active {
+  background-color: #00b9fe;
+  pointer-events: none;
+}
+.nav__link.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  background: url(../img/nav_dec_active.png) no-repeat left center;
+  width: 16px;
+  height: 40px;
+  z-index: 10000;
+}
+.nav__link:hover {
+  background-color: #dce6f0;
+}
+.nav__link:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+  background: url(../img/nav_dec_hover.png) no-repeat left center;
+  width: 18px;
+  height: 40px;
+  z-index: 10000;
+}
+.nav__link:hover:first-child:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -16px;
+  background: url(../img/nav_dec_hover_first.png) no-repeat left center;
+  width: 16px;
+  height: 40px;
+}
+/*--------Main--------*/
+/*--------Footer--------*/
+/*-------------------*/
