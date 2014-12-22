@@ -199,6 +199,25 @@ footer {
 .nav__item:first-child .nav__link {
   padding-left: 10px;
 }
+.nav__item:first-child .nav__link:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -16px;
+  background: url(../img/nav_dec_hover_first.png) no-repeat left center;
+  width: 16px;
+  height: 40px;
+}
+.nav__item:first-child .nav__link.active:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -16px;
+  background: url(../img/nav_dec_active_first.png) no-repeat left center;
+  width: 16px;
+  height: 40px;
+  z-index: 10000;
+}
 .nav__item:first-child:before {
   content: "";
   position: absolute;
@@ -232,6 +251,7 @@ footer {
 }
 .nav__link.active {
   background-color: #00b9fe;
+  color: #fff;
   pointer-events: none;
 }
 .nav__link.active:after {
@@ -256,15 +276,6 @@ footer {
   width: 18px;
   height: 40px;
   z-index: 10000;
-}
-.nav__link:hover:first-child:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -16px;
-  background: url(../img/nav_dec_hover_first.png) no-repeat left center;
-  width: 16px;
-  height: 40px;
 }
 /*--------Main--------*/
 /*--------Footer--------*/
