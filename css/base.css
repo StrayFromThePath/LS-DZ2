@@ -61,5 +61,5 @@ a {
 footer {
   position: relative;
   margin-top: -238px;
-  height: 238px;
+  min-height: 238px;
 }
