@@ -16,7 +16,7 @@
 .header {
     position: relative;
     min-height: 120px;
-    background: url(../img/head_bg.jpg) no-repeat 0 0/cover;
+    background: url("../img/head_bg.jpg") no-repeat 0 0/cover;
 }
 
 .header__logo {
@@ -84,7 +84,7 @@
         position: absolute;
         top: 0;
         right: -18px;
-        background: url(../img/nav_dec.png) no-repeat left center;
+        background: url("../img/nav_dec.png") no-repeat left center;
         width: 18px;
         height: 40px;
         z-index: 1000;
@@ -100,7 +100,7 @@
                     position: absolute;
                     top: 0;
                     left: -16px;
-                    background: url(../img/nav_dec_hover_first.png) no-repeat left center;
+                    background: url("../img/nav_dec_hover_first.png") no-repeat left center;
                     width: 16px;
                     height: 40px; 
                 }    
@@ -112,7 +112,7 @@
                     position: absolute;
                     top: 0;
                     left: -16px;
-                    background: url(../img/nav_dec_active_first.png) no-repeat left center;
+                    background: url("../img/nav_dec_active_first.png") no-repeat left center;
                     width: 16px;
                     height: 40px;
                     z-index: 10000;
@@ -125,7 +125,7 @@
             position: absolute;
             top: 0;
             left: -17px;
-            background: url(../img/nav_decor_first.png) no-repeat left center;
+            background: url("../img/nav_decor_first.png") no-repeat left center;
             width: 17px;
             height: 42px; 
         }
@@ -137,7 +137,7 @@
             position: absolute;
             top: 0;
             right: -16px;
-            background: url(../img/nav_decor_last.png) no-repeat right center;
+            background: url("../img/nav_decor_last.png") no-repeat right center;
             width: 16px;
             height: 41px; 
         }
@@ -167,7 +167,7 @@
             position: absolute;
             top: 0;
             right: -16px;
-            background: url(../img/nav_dec_active.png) no-repeat left center;
+            background: url("../img/nav_dec_active.png") no-repeat left center;
             width: 16px;
             height: 40px;
             z-index: 10000;
@@ -182,7 +182,7 @@
         position: absolute;
         top: 0;
         right: -18px;
-        background: url(../img/nav_dec_hover.png) no-repeat left center;
+        background: url("../img/nav_dec_hover.png") no-repeat left center;
         width: 18px;
         height: 40px;
         z-index: 10000;
@@ -237,16 +237,19 @@
 }
 
 .toolbar__right {
+    .clearfix;
     width: 285px;
     float: right;
 }
 
 .select-outer {
     .inlineblock;
+    float: left;
 }
 
 .pagination {
     .inlineblock;
+    float: right;
 }
 
 .pagination__item {
@@ -263,6 +266,60 @@
     font-size: 15px;
     color: #00b9fe;
     text-decoration: underline;
+}
+
+.slct {
+    position: relative;
+    display: block;
+    border: 1px solid #dae1eb;
+    background-color: #fff;
+    width: 133px;
+    height: 25px;
+    padding: 3px 0 0 6px;
+    .elektra-l;
+    font-size: 14px;
+    color: #5c7b98;
+    /*обрезаем текст,чтобы не вылезал за рамку*/
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 24px;
+        background: #00b9fe url("../img/select_str.png") no-repeat center center;
+    }
+}
+
+.drop {
+    display: none;
+    padding: 5px;
+    width: 133px;
+    border: 1px solid #dae1eb;
+    border-top: none;
+    position: absolute;
+    background: #fff;
+    z-index: 100;
+}
+
+.drop__item {
+    margin-bottom: 3px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.drop__link {
+    padding-left: 2px;
+    .elektra-l;
+    font-size: 14px;
+    color: #5c7b98;
 }
 
 .page-content {

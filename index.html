@@ -79,10 +79,16 @@
                     </div>
                     <div class="toolbar__right">
                         <div class="select-outer">
-                            <select name="select" id="select" size="1">
-                                <option value="grid">Сеткой</option>
-                                <option value="lines">Линиями</option>
-                            </select>
+                            <a href="#" class="slct">Сеткой</a>
+                            <ul class="drop">
+                                <li class="drop__item">
+                                    <a class="drop__link" href="#">Сеткой</a>
+                                </li>
+                                <li class="drop__item">
+                                    <a class="drop__link" href="#">Линиями</a>
+                                </li>
+                            </ul>
+                            <input type="hidden" id="select" />
                         </div>
                         <div class="pagination">
                             <ul class="pagination__list">
