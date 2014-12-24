@@ -42,5 +42,33 @@ $(document).ready(function(){
         return false;
     });
 
+    $('.menu__trigger').on('click', function(e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            item = $this.closest('.menu__item'),
+            list = $this.closest('.menu__list'),
+            items = list.find('.menu__item'),
+            content = item.find('.menu-drop'),
+            otherContent = list.find('.menu-drop'),
+            duration = 300;
+
+        if (!item.hasClass('active')) {
+            items.removeClass('active');
+            item.addClass('active');
+
+
+            otherContent.stop(true,true).slideUp(duration);
+            content.stop(true,true).slideDown(duration);
+        } else {
+            content.stop(true,true).slideUp(duration);
+            item.removeClass('active');
+
+        }
+
+
+
+    });
+
 
 });

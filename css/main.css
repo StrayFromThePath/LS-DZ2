@@ -471,6 +471,9 @@ footer {
   background-color: #00b9fe;
   color: #ffffff;
 }
+.menu-drop {
+  display: none;
+}
 .menu-drop__link {
   position: relative;
   padding-left: 35px;
