@@ -391,6 +391,8 @@
     margin-bottom: 40px;
 }
 
+/*Вид каталога линиями*/
+
 .catalog__item {
     margin-bottom: 20px;
 }
@@ -444,6 +446,103 @@
     .elektra-l;
     font-size: 14px;
     color: #5c7b98;
+}
+
+.catalog__list-option {
+    display: none;
+}
+
+/*Вид каталога линиями END*/
+
+/*Вид каталога сеткой*/
+
+.catalog__list-grid {
+    .clearfix;
+    margin-left: -25px;
+
+    .catalog__item {
+        margin-bottom: 0;
+    }
+
+    .catalog__link {
+        display: block;
+        float: left;
+        padding: 15px;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        min-height: 354px;
+        width: 230px;
+        .clearfix;
+        border-top: 2px solid #dce3ec;
+        border-right: 1px solid #dce3ec;
+        border-bottom: 1px solid #dce3ec;
+        border-left: 1px solid #dce3ec;
+        .transition(.3s);
+
+        &:hover {
+            box-shadow: 0px 1px 8px 0.00px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .catalog__item-img {
+        display: block;
+        position: relative;
+        height: 165px;
+        width: 200px;
+        float: none;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            margin: auto;
+            max-height: 130px;
+            max-width: 170px;
+        }
+    }
+
+    .catalog__item-info {
+        width: 200px;
+        float: none;
+    }
+
+    .catalog__item-info__title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        .elektra-l;
+        font-size: 15px;
+        color: #00b9fe;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .catalog__list-option {
+        display: block;
+    }
+
+    .catalog__item-info__description {
+        display: none;
+    }
+
+    .catalog__item-option {
+        .clearfix;
+        .elektra-l;
+        font-size: 14px;
+        color: #5c7b98;
+    }
+
+    .catalog__item-key {
+        width: 50%;
+        float: left;
+    }
+
+    .catalog__item-value {
+        width: 50%;
+        float: right;
+    }
 }
 
 .about {
