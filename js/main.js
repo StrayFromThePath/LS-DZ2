@@ -76,7 +76,7 @@ $(document).ready(function(){
             list = $('.catalog__list');
 
         $this.addClass('disabled').attr('disabled','disabled');
-        list.addClass('.catalog__list-grid').removeClass('.catalog__list-lines');
+        list.addClass('catalog__list-grid').removeClass('catalog__list-lines');
         $('.drop__link-lines').removeClass('disabled').removeAttr('disabled','disabled');
     });
 
@@ -85,7 +85,7 @@ $(document).ready(function(){
             list = $('.catalog__list');
 
         $this.addClass('disabled').attr('disabled','disabled');
-        list.addClass('.catalog__list-lines').removeClass('.catalog__list-grid');
+        list.addClass('catalog__list-lines').removeClass('catalog__list-grid');
         $('.drop__link-grid').removeClass('disabled').removeAttr('disabled','disabled');
     });
 });
