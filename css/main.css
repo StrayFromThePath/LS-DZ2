@@ -421,6 +421,10 @@ footer {
   font-size: 14px;
   color: #5c7b98;
 }
+.drop__link.disabled {
+  color: #bed1e3;
+  cursor: default;
+}
 .page-content {
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -470,6 +474,9 @@ footer {
 .menu__link.active {
   background-color: #00b9fe;
   color: #ffffff;
+}
+.menu-drop {
+  display: none;
 }
 .menu-drop__link {
   position: relative;
