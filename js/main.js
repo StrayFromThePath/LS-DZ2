@@ -100,13 +100,14 @@ $(document).ready(function(){
         e.preventDefault();
         $('.slct').text('Линиями');
         $('.drop__link-lines').addClass('disabled');
+        $('body,html').animate({scrollTop:100},800);//при смене вида с помощью нижнего селекта для удобства двигаем скролл в начало каталога
     });
 
     //Кнопка "Наверх"
-    $('.go-top').on('click',function(e){
+    $('.go-top').click(function(e){
         e.preventDefault();
 
-        $('body').animate({scrollTop:0},800);
+        $('body,html').animate({scrollTop:0},800);
     });
 });
 
