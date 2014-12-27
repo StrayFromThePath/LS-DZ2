@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Select
-    $('.slct').click(function(e){
+    $('.slct').on('click',function(e){
         e.preventDefault();
 
         var dropBlock = $(this).parent().find('.drop');
@@ -13,7 +13,7 @@ $(document).ready(function(){
             $(this).addClass('active');
 
             //Работаем с событием клика по элементам выпадающего списка
-            $('.drop__item').click(function(e){
+            $('.drop__item').on('click',function(e){
                 e.preventDefault();
                 //Заносим в переменную HTML код элемента
                 // списка по которому кликнули
@@ -36,7 +36,7 @@ $(document).ready(function(){
             dropBlock.slideUp();
         }
     });
-
+    //меню-аккордеон
     $('.menu__trigger').on('click', function(e) {
         e.preventDefault();
 
@@ -71,21 +71,33 @@ $(document).ready(function(){
         }
     });
 
-    $('.drop__link-grid').on('click', function(){
+    //Переключение вида товаров сеткой
+    $('.drop__link-grid').on('click', function(e){
+        e.preventDefault();
         var $this = $(this),
             list = $('.catalog__list');
 
-        $this.addClass('disabled').attr('disabled','disabled');
+        $this.addClass('disabled');
         list.addClass('catalog__list-grid').removeClass('catalog__list-lines');
-        $('.drop__link-lines').removeClass('disabled').removeAttr('disabled','disabled');
+        $('.drop__link-lines').removeClass('disabled');
     });
 
-    $('.drop__link-lines').on('click', function(){
+    //Переключение вида товаров линиями
+    $('.drop__link-lines').on('click', function(e){
+        e.preventDefault();
         var $this = $(this),
             list = $('.catalog__list');
 
-        $this.addClass('disabled').attr('disabled','disabled');
+        $this.addClass('disabled');
         list.addClass('catalog__list-lines').removeClass('catalog__list-grid');
-        $('.drop__link-grid').removeClass('disabled').removeAttr('disabled','disabled');
+        $('.drop__link-grid').removeClass('disabled');
+    });
+
+    //Кнопка "Наверх"
+    $('.go-top').on('click',function(e){
+        e.preventDefault();
+
+        $('body').animate({scrollTop:0},800);
     });
 });
+
