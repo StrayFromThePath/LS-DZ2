@@ -80,6 +80,8 @@ $(document).ready(function(){
         $this.addClass('disabled');
         list.addClass('catalog__list-grid').removeClass('catalog__list-lines');
         $('.drop__link-lines').removeClass('disabled');
+        $('.slct-bottom').text('Сеткой');//меняю значение во втором(нижнем) селекте
+        $('.drop__link-grid-bottom').addClass('disabled');
     });
 
     //Переключение вида товаров линиями
@@ -91,6 +93,13 @@ $(document).ready(function(){
         $this.addClass('disabled');
         list.addClass('catalog__list-lines').removeClass('catalog__list-grid');
         $('.drop__link-grid').removeClass('disabled');
+    });
+
+    //При клике на втором(нижнем) селекте меняется значение верхнего
+    $('.drop__link-lines-bottom').on('click', function(e){
+        e.preventDefault();
+        $('.slct').text('Линиями');
+        $('.drop__link-lines').addClass('disabled');
     });
 
     //Кнопка "Наверх"
