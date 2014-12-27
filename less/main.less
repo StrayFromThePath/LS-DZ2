@@ -250,6 +250,7 @@
 .pagination {
     .inlineblock;
     float: right;
+    padding-top: 5px;
 }
 
 .pagination__item {
@@ -461,6 +462,10 @@
     display: none;
 }
 
+.toolbar__bottom {
+    .clearfix;
+    display: none;
+}
 /*Вид каталога линиями END*/
 
 /*Вид каталога сеткой*/
@@ -518,16 +523,6 @@
         float: none;
     }
 
-    .catalog__item-info__title {
-        margin-top: 0;
-        margin-bottom: 15px;
-        .elektra-l;
-        font-size: 15px;
-        color: #00b9fe;
-        font-weight: normal;
-        text-decoration: underline;
-    }
-
     .catalog__list-option {
         display: block;
     }
@@ -552,6 +547,13 @@
         width: 50%;
         float: right;
     }
+
+    .toolbar__bottom {
+        .clearfix;
+        width: 740px;
+        margin-left: 25px;
+        display: block;
+    }
 }
 
 .about {
@@ -569,6 +571,41 @@
     .elektra-l;
     font-size: 15px;
     color: #5c7b98;
+}
+
+.go-top {
+    position: absolute;
+    width: 78px;
+    height: 34px;
+    bottom: 341px;
+    right: 201px;
+    .inlineblock;
+    background-color: #00b9fe;
+    .elektra-lb;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 32px;
+        background: url("../img/go-top-trtop.png") no-repeat 0 0;
+        width: 14px;
+        height: 6px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 32px;
+        background: url("../img/go-top-trbot.png") no-repeat 0 0;
+        width: 14px;
+        height: 7px;
+    }
 }
 
 /*--------Footer--------*/

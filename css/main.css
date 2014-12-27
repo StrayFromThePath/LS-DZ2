@@ -356,6 +356,7 @@ footer {
   vertical-align: top;
   zoom: 1 !ie;
   float: right;
+  padding-top: 5px;
 }
 .pagination__item {
   display: inline !ie;
@@ -558,6 +559,19 @@ footer {
 .catalog__list-option {
   display: none;
 }
+.toolbar__bottom {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  display: none;
+}
+.toolbar__bottom:before,
+.toolbar__bottom:after {
+  content: "";
+  display: table;
+}
+.toolbar__bottom:after {
+  clear: both;
+}
 /*Вид каталога линиями END*/
 /*Вид каталога сеткой*/
 .catalog__list-grid {
@@ -629,15 +643,6 @@ footer {
   width: 200px;
   float: none;
 }
-.catalog__list-grid .catalog__item-info__title {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-family: 'elektra_light_proregular';
-  font-size: 15px;
-  color: #00b9fe;
-  font-weight: normal;
-  text-decoration: underline;
-}
 .catalog__list-grid .catalog__list-option {
   display: block;
 }
@@ -667,6 +672,21 @@ footer {
   width: 50%;
   float: right;
 }
+.catalog__list-grid .toolbar__bottom {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  width: 740px;
+  margin-left: 25px;
+  display: block;
+}
+.catalog__list-grid .toolbar__bottom:before,
+.catalog__list-grid .toolbar__bottom:after {
+  content: "";
+  display: table;
+}
+.catalog__list-grid .toolbar__bottom:after {
+  clear: both;
+}
 .about {
   margin-bottom: 80px;
 }
@@ -680,6 +700,41 @@ footer {
   font-family: 'elektra_light_proregular';
   font-size: 15px;
   color: #5c7b98;
+}
+.go-top {
+  position: absolute;
+  width: 78px;
+  height: 34px;
+  bottom: 341px;
+  right: 201px;
+  display: inline !ie;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  background-color: #00b9fe;
+  font-family: 'elektra_light_probold';
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+}
+.go-top:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 32px;
+  background: url("../img/go-top-trtop.png") no-repeat 0 0;
+  width: 14px;
+  height: 6px;
+}
+.go-top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+  background: url("../img/go-top-trbot.png") no-repeat 0 0;
+  width: 14px;
+  height: 7px;
 }
 /*--------Footer--------*/
 .footer {

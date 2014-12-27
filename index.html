@@ -79,13 +79,13 @@
                     </div>
                     <div class="toolbar__right">
                         <div class="select-outer">
-                            <a href="#" class="slct">Сеткой</a>
+                            <a href="#" class="slct">Линиями</a>
                             <ul class="drop">
                                 <li class="drop__item">
                                     <a class="drop__link drop__link-grid" href="#">Сеткой</a>
                                 </li>
                                 <li class="drop__item">
-                                    <a class="drop__link drop__link-lines" href="#">Линиями</a>
+                                    <a class="drop__link drop__link-lines disabled" href="#">Линиями</a>
                                 </li>
                             </ul>
                             <input type="hidden" id="select" />
@@ -197,6 +197,14 @@
                                 </li>
                                 <li class="menu__item">
                                     <a href="#" class="menu__link menu__trigger">Другое</a>
+                                    <ul class="menu__list menu-drop">
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link menu-drop__link">AppleTV</a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link menu-drop__link">Аксессуары</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>    
                         </div>
@@ -204,7 +212,7 @@
 
                     <div class="page-content__right">
                         <div class="catalog">
-                            <ul class="catalog__list-lines">
+                            <ul class="catalog__list catalog__list-lines">
                                 <li class="catalog__item">
                                     <a class="catalog__link" href="#">
                                         <div class="catalog__item-img">
@@ -424,6 +432,42 @@
                                         </div>
                                     </a>
                                 </li>
+                                <div class="toolbar__bottom">
+                                    <div class="select-outer">
+                                        <a href="#" class="slct slct-bottom">Сеткой</a>
+                                        <ul class="drop">
+                                            <li class="drop__item">
+                                                <a class="drop__link drop__link-grid disabled" href="#">Сеткой</a>
+                                            </li>
+                                            <li class="drop__item">
+                                                <a class="drop__link drop__link-lines" href="#">Линиями</a>
+                                            </li>
+                                        </ul>
+                                        <input type="hidden" id="select1"/>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul class="pagination__list">
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">1</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">2</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">3</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">4</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">5</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a class="pagination__link" href="#">Все</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
 
@@ -438,7 +482,8 @@
                         </div>
                     </div>
                 </div>    
-            </div>    
+            </div>
+            <a class="go-top" href="#">Наверх</a>
         </div>
     <div class="empty"></div>
     </div>
