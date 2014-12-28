@@ -16,7 +16,7 @@
 .header {
     position: relative;
     min-height: 120px;
-    background: url("../img/head_bg.jpg") no-repeat 0 0/cover;
+    background: #dee7f1 url("../img/head_bg.jpg") 0 0/100% no-repeat;
 }
 
 .header__logo {
@@ -149,7 +149,8 @@
     padding-right: 10px;
     padding-left: 28px;
     background-color: #f7f7f7;
-    box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
+    .box-shadow(0px 1px 0 0 rgba(0, 0, 0, 0.15));
+    .box-shadowIE (0,1,#e3e3e3);
     .elektra-l;
     font-size: 15px;
     color: #5c7b98;
@@ -443,7 +444,7 @@
     .transition(.3s);
 
     &:hover {
-        box-shadow: 0px 1px 8px 0.00px rgba(0, 0, 0, 0.15);
+        .box-shadow (0px 1px 8px 0 rgba(0, 0, 0, 0.15));
     }
 }
 
@@ -521,7 +522,7 @@
         .transition(.3s);
 
         &:hover {
-            box-shadow: 0px 1px 8px 0.00px rgba(0, 0, 0, 0.15);
+            .box-shadow(0px 1px 8px 0 rgba(0, 0, 0, 0.15));
         }
     }
 
@@ -752,3 +753,8 @@
 
 /*-------------------*/
 
+@media screen and (max-width: 1400px) {
+    .go-top {
+        right: 2px;
+    }
+}

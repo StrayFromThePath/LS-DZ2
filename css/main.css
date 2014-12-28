@@ -130,7 +130,7 @@ footer {
 .header {
   position: relative;
   min-height: 120px;
-  background: url("../img/head_bg.jpg") no-repeat 0 0 / cover;
+  background: #dee7f1 url("../img/head_bg.jpg") 0 0% no-repeat;
 }
 .header__logo {
   width: 199px;
@@ -245,7 +245,10 @@ footer {
   padding-right: 10px;
   padding-left: 28px;
   background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#e3e3e3);
   font-family: 'elektra_light_proregular';
   font-size: 15px;
   color: #5c7b98;
@@ -544,7 +547,9 @@ footer {
   clear: both;
 }
 .catalog__link:hover {
-  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .catalog__item-img {
   display: block;
@@ -652,7 +657,9 @@ footer {
   clear: both;
 }
 .catalog__list-grid .catalog__link:hover {
-  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .catalog__list-grid .catalog__item-img {
   display: block;
@@ -885,3 +892,8 @@ footer {
   background-position: -103px -33px;
 }
 /*-------------------*/
+@media screen and (max-width: 1400px) {
+  .go-top {
+    right: 2px;
+  }
+}
