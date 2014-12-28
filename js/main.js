@@ -109,5 +109,14 @@ $(document).ready(function(){
 
         $('body,html').animate({scrollTop:0},800);
     });
+
+    //Показывем кнопку Наверх
+    $(window).on('scroll', function(){
+        if ($(this).scrollTop() > 100) {
+            $('.go-top').fadeIn('slow');
+        } else {
+            $('.go-top').fadeOut('slow');
+        }
+    });
 });
 
