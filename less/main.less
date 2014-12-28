@@ -63,7 +63,7 @@
 
 
 
-/*------Menu---------*/
+/*------Навигация---------*/
 
 .nav {
     margin-bottom: 20px;
@@ -161,6 +161,22 @@
         background-color: #00b9fe;
         color: #fff;
         pointer-events: none;
+
+        &:hover {
+            background-color: #00b9fe;
+            cursor: default;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: -16px;
+                background: url("../img/nav_dec_active.png") no-repeat left center;
+                width: 16px;
+                height: 40px;
+                z-index: 10000;
+            }
+        }
         
         &:after {
             content: "";
@@ -268,6 +284,11 @@
     font-size: 15px;
     color: #00b9fe;
     text-decoration: underline;
+    
+    &.active {
+        color: #5c7b98;
+        text-decoration: none;
+    }
 }
 
 .slct {
@@ -343,6 +364,8 @@
     width: 740px;
     float: right;
 }
+
+/*Меню-аккордеон*/
 
 .menu {
     width: 229px;
@@ -560,6 +583,8 @@
     }
 }
 
+/*О магазине*/
+
 .about {
     margin-bottom: 71px;
 }
@@ -578,8 +603,10 @@
     color: #5c7b98;
 }
 
+/*Кнопка Наверх*/
+
 .go-top {
-    position: absolute;
+    position: fixed;
     width: 78px;
     height: 34px;
     bottom: 292px;
@@ -591,6 +618,7 @@
     color: #fff;
     text-align: center;
     line-height: 35px;
+    display: none;
     
     &:before {
         content: "";

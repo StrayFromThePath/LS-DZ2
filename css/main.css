@@ -168,7 +168,7 @@ footer {
 .contacts__mail:hover {
   text-decoration: underline;
 }
-/*------Menu---------*/
+/*------Навигация---------*/
 .nav {
   margin-bottom: 20px;
 }
@@ -257,6 +257,20 @@ footer {
   background-color: #00b9fe;
   color: #fff;
   pointer-events: none;
+}
+.nav__link.active:hover {
+  background-color: #00b9fe;
+  cursor: default;
+}
+.nav__link.active:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  background: url("../img/nav_dec_active.png") no-repeat left center;
+  width: 16px;
+  height: 40px;
+  z-index: 10000;
 }
 .nav__link.active:after {
   content: "";
@@ -375,6 +389,10 @@ footer {
   color: #00b9fe;
   text-decoration: underline;
 }
+.pagination__link.active {
+  color: #5c7b98;
+  text-decoration: none;
+}
 .slct {
   position: relative;
   display: block;
@@ -448,6 +466,7 @@ footer {
   width: 740px;
   float: right;
 }
+/*Меню-аккордеон*/
 .menu {
   width: 229px;
   margin-bottom: 25px;
@@ -701,6 +720,7 @@ footer {
 .catalog__list-grid .toolbar__bottom:after {
   clear: both;
 }
+/*О магазине*/
 .about {
   margin-bottom: 71px;
 }
@@ -716,8 +736,9 @@ footer {
   font-size: 15px;
   color: #5c7b98;
 }
+/*Кнопка Наверх*/
 .go-top {
-  position: absolute;
+  position: fixed;
   width: 78px;
   height: 34px;
   bottom: 292px;
@@ -732,6 +753,7 @@ footer {
   color: #fff;
   text-align: center;
   line-height: 35px;
+  display: none;
 }
 .go-top:before {
   content: "";
