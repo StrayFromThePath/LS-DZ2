@@ -16,7 +16,8 @@
 .header {
     position: relative;
     min-height: 120px;
-    background: #dee7f1 url("../img/head_bg.jpg") 0 0/100% no-repeat;
+    background-image: linear-gradient(to right,#d9e4ef 0,#eef2f8 50%,#d9e4ef 100%);
+    background-color: #dee7f1;
 }
 
 .header__logo {
@@ -61,8 +62,6 @@
     }
 }
 
-
-
 /*------Навигация---------*/
 
 .nav {
@@ -87,7 +86,7 @@
         background: url("../img/nav_dec.png") no-repeat left center;
         width: 18px;
         height: 40px;
-        z-index: 1000;
+        z-index: 10;
     }
     
     &:first-child {
@@ -115,7 +114,7 @@
                     background: url("../img/nav_dec_active_first.png") no-repeat left center;
                     width: 16px;
                     height: 40px;
-                    z-index: 10000;
+                    z-index: 10;
                 }
             }
         }
@@ -156,7 +155,7 @@
     color: #5c7b98;
     line-height: 40px;
     text-align: center;
-    z-index: 10000;
+    z-index: 100;
     
     &.active {
         background-color: #00b9fe;
@@ -175,7 +174,7 @@
                 background: url("../img/nav_dec_active.png") no-repeat left center;
                 width: 16px;
                 height: 40px;
-                z-index: 10000;
+                z-index: 100;
             }
         }
         
@@ -187,7 +186,7 @@
             background: url("../img/nav_dec_active.png") no-repeat left center;
             width: 16px;
             height: 40px;
-            z-index: 10000;
+            z-index: 100;
         }
     }
     
@@ -202,7 +201,7 @@
         background: url("../img/nav_dec_hover.png") no-repeat left center;
         width: 18px;
         height: 40px;
-        z-index: 10000;
+        z-index: 100;
         }
         
     }
@@ -663,10 +662,14 @@
     left: 258px;
 }
 
-.footer-nav__list {
-    width: 135px;
+.footer-nav__lists {
+    .clearfix;
+}
+
+.footer-nav__items {
     float: left;
-    margin-left: 26px;
+    width: 150px;
+    margin-left: 12px;
 
     &:first-child {
         margin-left: 0;

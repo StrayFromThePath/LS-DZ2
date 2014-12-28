@@ -130,7 +130,8 @@ footer {
 .header {
   position: relative;
   min-height: 120px;
-  background: #dee7f1 url("../img/head_bg.jpg") 0 0% no-repeat;
+  background-image: linear-gradient(to right, #d9e4ef 0, #eef2f8 50%, #d9e4ef 100%);
+  background-color: #dee7f1;
 }
 .header__logo {
   width: 199px;
@@ -198,7 +199,7 @@ footer {
   background: url("../img/nav_dec.png") no-repeat left center;
   width: 18px;
   height: 40px;
-  z-index: 1000;
+  z-index: 10;
 }
 .nav__item:first-child .nav__link {
   padding-left: 10px;
@@ -220,7 +221,7 @@ footer {
   background: url("../img/nav_dec_active_first.png") no-repeat left center;
   width: 16px;
   height: 40px;
-  z-index: 10000;
+  z-index: 10;
 }
 .nav__item:first-child:before {
   content: "";
@@ -254,7 +255,7 @@ footer {
   color: #5c7b98;
   line-height: 40px;
   text-align: center;
-  z-index: 10000;
+  z-index: 100;
 }
 .nav__link.active {
   background-color: #00b9fe;
@@ -273,7 +274,7 @@ footer {
   background: url("../img/nav_dec_active.png") no-repeat left center;
   width: 16px;
   height: 40px;
-  z-index: 10000;
+  z-index: 100;
 }
 .nav__link.active:after {
   content: "";
@@ -283,7 +284,7 @@ footer {
   background: url("../img/nav_dec_active.png") no-repeat left center;
   width: 16px;
   height: 40px;
-  z-index: 10000;
+  z-index: 100;
 }
 .nav__link:hover {
   background-color: #dce6f0;
@@ -296,7 +297,7 @@ footer {
   background: url("../img/nav_dec_hover.png") no-repeat left center;
   width: 18px;
   height: 40px;
-  z-index: 10000;
+  z-index: 100;
 }
 /*---------Sidebar----------*/
 .toolbar {
@@ -806,12 +807,24 @@ footer {
 .footer-nav:after {
   clear: both;
 }
-.footer-nav__list {
-  width: 135px;
-  float: left;
-  margin-left: 26px;
+.footer-nav__lists {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
 }
-.footer-nav__list:first-child {
+.footer-nav__lists:before,
+.footer-nav__lists:after {
+  content: "";
+  display: table;
+}
+.footer-nav__lists:after {
+  clear: both;
+}
+.footer-nav__items {
+  float: left;
+  width: 150px;
+  margin-left: 12px;
+}
+.footer-nav__items:first-child {
   margin-left: 0;
 }
 .footer-nav__title {
